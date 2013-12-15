@@ -1,0 +1,27 @@
+#table-div {
+	width:225px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#main-div {
+	width:600px;
+	border-radius: 20px;
+	background-color:#fff;
+	padding:10px;
+	height:300px;
+	margin: auto;
+	position:absolute;
+	top:0;bottom:0;
+	left:0;right:0;
+	opacity: 0.8;
+}
+
+input {
+	width: 50px;
+	margin: auto;
+}
+
+td {
+	width: 75px;
+}

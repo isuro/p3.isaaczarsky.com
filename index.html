@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Project 3</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<script src="js/scripts.js"></script>
+
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+	
+	</head>
+	<body>
+		<div id="main-div">
+			<h2 style="text-align:center;">Color Picker</h2>
+			<p style="text-align:center;">A RGB/Hex color converter with live preview. Just modify a value to see a new color.</p>
+			<br />
+			<div id="table-div">
+			<table>
+				<tr><td>Red</td><td>Green</td><td>Blue</td></tr>
+				<tr>
+					<td><input id="red" type="text" value="255" maxlength="3" onkeyup="rgbToHex()"></td>
+					<td><input id="green" type="text" value="255" maxlength="3" onkeyup="rgbToHex()"></td>
+					<td><input id="blue" type="text" value="255" maxlength="3" onkeyup="rgbToHex()"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Hex Value</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>#<input id="hex" type="text" value="ffffff" maxlength="7" onkeyup="hexToRgb()"></td>
+				</tr>
+			</table>
+			</div>
+		</div>
+	</body>
+</html>

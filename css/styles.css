@@ -1,5 +1,5 @@
 #table-div {
-	width:225px;
+	width:500px;
 	margin-left:auto;
 	margin-right:auto;
 }
@@ -18,10 +18,15 @@
 }
 
 input {
-	width: 50px;
+	width: 65px;
 	margin: auto;
 }
 
 td {
-	width: 75px;
+	text-align: center;
+}
+
+.slider {
+	width: 150px;
+	margin: 10px;
 }

@@ -14,16 +14,16 @@
 	</head>
 	<body>
 		<div id="main-div">
-			<h2 style="text-align:center;">Color Picker</h2>
-			<p style="text-align:center;">A RGB/Hex color converter with live preview. Just modify a value to see a new color.</p>
+			<h2>Color Picker</h2>
+			<p>A RGB/Hex color converter with live preview. Just modify a value to see a new color.</p>
 			<br />
 			<div id="table-div">
 			<table>
 				<tr><td>Red</td><td>Green</td><td>Blue</td></tr>
 				<tr>
-					<td><input id="red" type="number" value="255" maxlength="3" onkeyup="rgbToHex()"></td>
-					<td><input id="green" type="number" value="255" maxlength="3" onkeyup="rgbToHex()"></td>
-					<td><input id="blue" type="number" value="255" maxlength="3" onkeyup="rgbToHex()"></td>
+					<td><input id="red" type="number" value="255" min="0" max="255" maxlength="3" onkeyup="rgbToHex()"></td>
+					<td><input id="green" type="number" value="255" min="0" max="255" maxlength="3" onkeyup="rgbToHex()"></td>
+					<td><input id="blue" type="number" value="255" min="0" max="255" maxlength="3" onkeyup="rgbToHex()"></td>
 				</tr>
 				<tr>
 					<td><div id="red-slider" class="slider"></div></td>

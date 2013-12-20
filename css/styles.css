@@ -1,5 +1,9 @@
+body {
+	text-align: center;
+}
+
 #table-div {
-	width:500px;
+	width:515px;
 	margin-left:auto;
 	margin-right:auto;
 }
@@ -20,10 +24,6 @@
 input {
 	width: 65px;
 	margin: auto;
-}
-
-td {
-	text-align: center;
 }
 
 .slider {

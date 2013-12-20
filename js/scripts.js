@@ -1,5 +1,23 @@
-// var computedHexValue = "ffffff";
+$(function() {
+    $( ".slider" ).slider({
+    	max:255,
+    	value: 255,
+    	slide: function( event, ui ) {}
+    });
 
+    $("#red-slider").on("slide", function(event, ui){
+    	$("#red").val(ui.value);
+    	rgbToHex();
+    });
+    $("#green-slider").on("slide", function(event, ui){
+    	$("#green").val(ui.value);
+    	rgbToHex();
+    });
+    $("#blue-slider").on("slide", function(event, ui){
+    	$("#blue").val(ui.value);
+    	rgbToHex();
+    });
+  });
 
 function rgbToHex() {
 
@@ -26,6 +44,10 @@ function rgbToHex() {
 
 	colorChanger(computedHexValue);
 
+	$("#red-slider").slider("option", "value", $("#red").val());
+	$("#green-slider").slider("option", "value", $("#green").val());
+	$("#blue-slider").slider("option", "value", $("#blue").val());
+
 }
 
 function hexToRgb() {
@@ -48,6 +70,10 @@ function hexToRgb() {
 	$("#red").val(parseInt(hexValue.substring(0, 2), 16));
 	$("#green").val(parseInt(hexValue.substring(2, 4), 16));
 	$("#blue").val(parseInt(hexValue.substring(4, 6), 16));
+
+	$("#red-slider").slider("option", "value", $("#red").val());
+	$("#green-slider").slider("option", "value", $("#green").val());
+	$("#blue-slider").slider("option", "value", $("#blue").val());
 
 	colorChanger(hexValue);
 

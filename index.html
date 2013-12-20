@@ -8,6 +8,7 @@
 		<script src="js/scripts.js"></script>
 
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 		<link rel="stylesheet" href="css/styles.css">
 	
 	</head>
@@ -20,9 +21,14 @@
 			<table>
 				<tr><td>Red</td><td>Green</td><td>Blue</td></tr>
 				<tr>
-					<td><input id="red" type="text" value="255" maxlength="3" onkeyup="rgbToHex()"></td>
-					<td><input id="green" type="text" value="255" maxlength="3" onkeyup="rgbToHex()"></td>
-					<td><input id="blue" type="text" value="255" maxlength="3" onkeyup="rgbToHex()"></td>
+					<td><input id="red" type="number" value="255" maxlength="3" onkeyup="rgbToHex()"></td>
+					<td><input id="green" type="number" value="255" maxlength="3" onkeyup="rgbToHex()"></td>
+					<td><input id="blue" type="number" value="255" maxlength="3" onkeyup="rgbToHex()"></td>
+				</tr>
+				<tr>
+					<td><div id="red-slider" class="slider"></div></td>
+					<td><div id="green-slider" class="slider"></div></td>
+					<td><div id="blue-slider" class="slider"></div></td>
 				</tr>
 				<tr>
 					<td></td>

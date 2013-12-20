@@ -1,10 +1,19 @@
+/*
+Turns out most of the Hex/RGB conversion is covered by built-in functions within
+jQuery, but I didn't discover that until I had already written my own versions,
+so I just kept mine.
+*/
+
 $(function() {
+
+	// Creates sliders for the RGB values
     $( ".slider" ).slider({
     	max:255,
     	value: 255,
     	slide: function( event, ui ) {}
     });
 
+    // Connects each slider to the value it represents
     $("#red-slider").on("slide", function(event, ui){
     	$("#red").val(ui.value);
     	rgbToHex();
@@ -44,6 +53,7 @@ function rgbToHex() {
 
 	colorChanger(computedHexValue);
 
+	// Sets the sliders' positions to the inputs' values
 	$("#red-slider").slider("option", "value", $("#red").val());
 	$("#green-slider").slider("option", "value", $("#green").val());
 	$("#blue-slider").slider("option", "value", $("#blue").val());
@@ -71,6 +81,7 @@ function hexToRgb() {
 	$("#green").val(parseInt(hexValue.substring(2, 4), 16));
 	$("#blue").val(parseInt(hexValue.substring(4, 6), 16));
 
+	// Sets the sliders' positions to the inputs' values
 	$("#red-slider").slider("option", "value", $("#red").val());
 	$("#green-slider").slider("option", "value", $("#green").val());
 	$("#blue-slider").slider("option", "value", $("#blue").val());
